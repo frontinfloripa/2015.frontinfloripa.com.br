@@ -1,0 +1,92 @@
+html, body
+  height: 100%
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+body
+  font-size: 62.5%
+  background: #eee
+  font-family: 'Arial', helvetica, sans-serif
+  
+header
+  position: relative
+  height: 100%
+  overflow: hidden
+  
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    display: block
+    width: 100%
+    height: 50px
+    background: url('../img/tint.png') center bottom no-repeat
+    
+  &:before
+    content: ''
+    position: absolute
+    bottom: 0
+    top: 0
+    left: 0
+    right: 0
+    display: block
+    opacity: .15
+    background: url('../img/texture.jpg') center bottom no-repeat
+    background-size: cover
+    z-index: -20
+  
+#header-video
+  position: absolute
+  top: 0
+  left: 0
+  min-width: 100%
+  min-height: 100%
+  width: auto
+  height: auto
+  z-index: -100
+
+.header-content
+  padding-top: 5em
+  text-align: center
+  font-family: 'Montserrat', sans-serif
+  z-index: 1000
+  
+.header-logo
+  margin: 0
+  padding: 0
+  
+  img
+    display: inline-block
+    text-align: center
+    max-width: 16em
+
+.date
+  margin: -1.4em auto 0 auto
+  padding: 0
+  display: block
+  text-align: center
+  width: 475px
+  height: 100px
+  font-size: 4em
+  font-weight: 700
+  color: #fff
+  line-height: 2.9em
+  text-transform: uppercase
+  //background: url('../img/date.png') center bottom no-repeat
+    
+.button-buy
+  display: inline-block
+  background: $color-action
+  color: #fff
+  text-decoration: none
+  padding: .8em 2em
+  font-size: 2em
+  font-weight: 700
+  text-transform: uppercase
+  border-radius: 2em
+  margin-top: 1.6em
+  z-index: 200
+  transition: background .5s ease
+  
+  &:hover
+    background: darken(@background, 20%)
