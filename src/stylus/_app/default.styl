@@ -1,17 +1,12 @@
-html, body
-  height: 100%
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-
-body
-  font-size: 62.5%
-  background: #eee
-  font-family: 'Arial', helvetica, sans-serif
-  
-header
+// -- Header  
+.header
   position: relative
   height: 100%
   overflow: hidden
+  background: bg('img/bg-surfer.jpg')
+  
+  @media phone
+    font-size: 90%
   
   &:after
     content: ''
@@ -20,7 +15,8 @@ header
     display: block
     width: 100%
     height: 50px
-    background: url('../img/tint.png') center bottom no-repeat
+    background: bg('img/tint.png') center bottom no-repeat
+    z-index: 20
     
   &:before
     content: ''
@@ -31,9 +27,9 @@ header
     right: 0
     display: block
     opacity: .15
-    background: url('../img/texture.jpg') center bottom no-repeat
+    background: bg('img/texture.jpg') center bottom no-repeat
     background-size: cover
-    z-index: -20
+    z-index: 10
   
 #header-video
   position: absolute
@@ -43,36 +39,47 @@ header
   min-height: 100%
   width: auto
   height: auto
-  z-index: -100
+  
+  @media phone
+    display: none
 
 .header-content
-  padding-top: 5em
   text-align: center
-  font-family: 'Montserrat', sans-serif
   z-index: 1000
+  vertical-center()
+  
+  @media phone
+    position: static
+    transform: none
   
 .header-logo
-  margin: 0
+  margin: -2em 0 0 0
   padding: 0
+  width: 24em
+  height: 18em
+  background: bg('svg/logo-fif-2015.svg') center center no-repeat
+  background-size: 70%
+  text-indent: -9999em
   
-  img
-    display: inline-block
-    text-align: center
-    max-width: 16em
+  @media phone
+    width: 100%
+    height: 17em
+    margin-top: 2em
+    background-size: 65%
 
-.date
-  margin: -1.4em auto 0 auto
+.header-metadata
+  margin: 0 auto
   padding: 0
   display: block
   text-align: center
-  width: 475px
-  height: 100px
   font-size: 4em
-  font-weight: 700
+  font-weight: 900
   color: #fff
-  line-height: 2.9em
+  line-height: 1.6em
   text-transform: uppercase
-  //background: url('../img/date.png') center bottom no-repeat
+  
+  @media phone
+    font-size: 2.5em
     
 .button-buy
   display: inline-block
@@ -81,7 +88,7 @@ header
   text-decoration: none
   padding: .8em 2em
   font-size: 2em
-  font-weight: 700
+  font-weight: bold
   text-transform: uppercase
   border-radius: 2em
   margin-top: 1.6em
@@ -89,4 +96,7 @@ header
   transition: background .5s ease
   
   &:hover
-    background: darken(@background, 20%)
+    background: lighten(@background, 20%)
+
+  @media phone
+    font-size: 1.8em
