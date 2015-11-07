@@ -19,9 +19,12 @@ $heading
     margin-top: -150px
     margin-left: -(@width / 2)
     background: bg('img/bg-heading.png') no-repeat
-    background-size: 100% auto
+    background-size: 100%
     z-index: 10
     opacity: .7
+    
+    @media phone
+      display: none
     
   &:after
     content: ''
@@ -33,3 +36,7 @@ $heading
     margin-top: .2em
     background: $color-action
     margin-left: -(@width / 2)
+
+  @media phone
+    padding-top: 1em
+    font-size: 3em

@@ -3,7 +3,8 @@
   position: relative
   height: 100%
   overflow: hidden
-  background: bg('img/bg-floripa.jpg')
+  background-image: bg('img/bg-floripa.jpg')
+  background-position: center center
   
   @media phone
     font-size: 90%
@@ -138,6 +139,8 @@
   z-index: 100
   
   @media phone
+    min-height: 12em
+    padding-left: 8em
     @extends $grider-phone-12
     
 .speaker-avatar
@@ -146,7 +149,9 @@
   top: 0
   max-width: 14em
   border-radius: 20px 0 0 20px
-  //border: 2px solid #353535
+  
+  @media phone 
+    max-width: 8em
   
 .speaker-name
   margin: .4em 0 0 0
@@ -158,14 +163,22 @@
   text-transform: uppercase
   padding: .1em .3em
   
+  @media phone 
+    font-size: 1.6em
+  
 .speaker-bio
   margin: 0
-  font-size: 1em
+  font-size: 1.1em
+  font-weight: 300
   color: #fff
   line-height: 1.6em
-  max-width: 80%
+  max-width: 85%
   padding: .7em 1.1em
-  background: rgba(#fff, .1)
+  background: rgba(#333, .5)
+  border-radius: 0 0 .8em 0
+  
+  @media phone
+    display: none
 
 // -- Section: Schedule
 .section-schedule
@@ -189,6 +202,10 @@
 .local-content
   max-width: 40em
   padding: 10em 0 0 10em
+  
+  @media phone
+    padding: 15em 0 0 0
+    text-align: center
 
 .local-title,
 .local-description,
@@ -231,6 +248,10 @@
   max-width: 800px
   margin: 15em auto
   text-align: center
+  padding: 0 1em
+  
+  @media phone
+    margin-top: 8em
 
 .ticket-item
   display: block
@@ -239,6 +260,9 @@
   position: relative
   max-width: 50em
   margin: 2em auto
+  
+  @media phone 
+    max-width: 90%
   
   &:before, &:after
     content: ''
@@ -251,6 +275,9 @@
     margin-top: -(@height / 2)
     position: absolute
     
+    @media phone
+      display: none
+    
   &:before
     left: -30px
   
@@ -259,7 +286,7 @@
 
 .ticket-item-content
   position: absolute
-  left: 50px
+  left: 10%
   right: @left
   top: 30px
   bottom: @top
@@ -287,6 +314,10 @@
   display: block
   padding-top: .75em
   text-shadow: 0 2px 0 #333
+  
+  @media phone 
+    padding-top: 1.6em
+    font-size: 3em
   
 .button-buy-ticket
   font-size: 2.5em
