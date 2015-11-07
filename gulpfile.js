@@ -17,7 +17,8 @@ var paths = {
 
 var watches = {
     stylus:     paths.src + '/stylus/**/*.styl',
-    handlebars: paths.src + '/handlebars/**/*.hbs'
+    handlebars: paths.src + '/handlebars/**/*.hbs',
+    datas:      paths.src + '/data/*.yml'
 };
 
 var files = {
@@ -34,10 +35,16 @@ gulp.task('connect', connect.server({
 
 // -- Handlebars (HTML) task
 gulp.task('handlebars', function () {
-    var config = yaml.safeLoad(fs.readFileSync('./config.yml', 'utf-8'));
+    var config   = yaml.safeLoad(fs.readFileSync('./src/data/config.yml', 'utf-8'));
+    var speakers = yaml.safeLoad(fs.readFileSync('./src/data/speakers.yml', 'utf-8'));
+    var schedule = yaml.safeLoad(fs.readFileSync('./src/data/schedule.yml', 'utf-8'));
     
     gulp.src(files.handlebars)
-        .pipe(handlebars(config))
+        .pipe(handlebars({
+            config: config,
+            speakers: speakers,
+            schedule: schedule
+        }))
         .pipe(rename('index.html'))
         .pipe(gulp.dest(paths.dist))
         .pipe(connect.reload());
@@ -64,8 +71,9 @@ gulp.task('deploy', function() {
 // -- Watch task
 gulp.task('watch', function () {
     gulp.watch(watches.stylus, ['stylus']);
-    gulp.watch(watches.handlebars, ['handlebars']);
+    gulp.watch([watches.handlebars, watches.datas], ['handlebars']);
 });
 
 // -- Set 'gulp server' for development
-gulp.task('server', ['handlebars', 'stylus', 'connect', 'watch']);
+gulp.task('build',  ['handlebars', 'stylus']);
+gulp.task('server', ['build', 'connect', 'watch']);

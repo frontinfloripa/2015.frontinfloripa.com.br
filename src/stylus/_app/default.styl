@@ -105,3 +105,188 @@
 
   @media phone
     font-size: 1.8em
+
+
+// -- Section: Features
+.section-features
+  @extends $section
+  height: 100em
+
+// -- Section: Speakers
+.section-speakers
+  @extends $section
+  padding-top: 0
+  height: 100em
+  background-image: bg('img/bg-speakers.jpg')
+  background-repeat: no-repeat
+  background-position: center top
+  background-size: cover
+  min-height: 1264px
+  
+  .section-title
+    padding-top: 2em
+  
+.speakers-list
+  @extends $container
+  margin-top: 8em
+  
+.speaker-item
+  @extends $grider-6
+  min-height: 20em
+  padding-left: 14em
+  position: relative
+  z-index: 100
+  
+  @media phone
+    @extends $grider-phone-12
+    
+.speaker-avatar
+  position: absolute
+  left: 0
+  top: 0
+  max-width: 14em
+  border-radius: 20px 0 0 20px
+  //border: 2px solid #353535
+  
+.speaker-name
+  margin: .4em 0 0 0
+  background: #353535
+  color: #fff
+  display: inline-block
+  font-size: 3em
+  font-weight: 100
+  text-transform: uppercase
+  padding: .1em .3em
+  
+.speaker-bio
+  margin: 0
+  font-size: 1em
+  color: #fff
+  line-height: 1.6em
+  max-width: 80%
+  padding: .7em 1.1em
+  background: rgba(#fff, .1)
+
+// -- Section: Schedule
+.section-schedule
+  @extends $section
+  padding-top: 0
+  height: 100em
+
+// -- Section: Local
+.section-local
+  @extends $section
+  padding-top: 0
+  background-image: bg('img/bg-local.jpg')
+  background-repeat: no-repeat
+  background-position: center top
+  background-size: cover
+  height: 599px
+  
+.local-wrapper
+  @extends $container
+  
+.local-content
+  max-width: 40em
+  padding: 10em 0 0 10em
+
+.local-title,
+.local-description,
+.local-link
+  display: inline-block
+  color: #fff
+  font-weight: 300
+  margin: 0
+  
+.local-title
+  background: $color-action
+  font-size: 3em
+  padding: .1em .4em
+  text-transform: uppercase
+  
+.local-description
+  font-size: 1.5em
+  background: rgba(#444, .8)
+  padding: .5em 1em
+  
+.local-link
+  font-size: 1.5em
+  background: $color-action
+  padding: .5em 1em
+  text-decoration: underline
+  
+  &:hover
+    background: lighten(@background, 20%)
+
+// -- Section: Tickets
+.section-tickets
+  @extends $section
+  padding-top: 0
+  height: 100em
+  
+  .section-title
+    padding-top: 2em
+
+.ticket-wrapper
+  max-width: 800px
+  margin: 15em auto
+  text-align: center
+
+.ticket-item
+  display: block
+  background: $color-heading
+  height: 20em
+  position: relative
+  max-width: 50em
+  margin: 2em auto
+  
+  &:before, &:after
+    content: ''
+    background: #ededed
+    border-radius: 50%
+    display: block
+    width: 50px
+    height: 70px
+    top: 50%
+    margin-top: -(@height / 2)
+    position: absolute
+    
+  &:before
+    left: -30px
+  
+  &:after
+    right: -30px
+
+.ticket-item-content
+  position: absolute
+  left: 50px
+  right: @left
+  top: 30px
+  bottom: @top
+  border-radius: 1em
+  border: 2px solid #ededed
+  
+.ticket-item-lote
+  background: $color-heading
+  color: #fff
+  font-size: 1.6em
+  display: inline-block
+  width: 6em
+  padding: .1em 0
+  position: absolute
+  top: -13px
+  left: 50%
+  margin-left: -(@width / 2)
+  font-weight: 300
+  text-transform: uppercase
+  
+.ticket-item-value
+  color: #fff
+  font-size: 5em
+  font-weight: bold
+  display: block
+  padding-top: .75em
+  text-shadow: 0 2px 0 #333
+  
+.button-buy-ticket
+  font-size: 2.5em

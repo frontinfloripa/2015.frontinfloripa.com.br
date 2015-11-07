@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-    <title>{{name}} &bull; {{description}}</title>
+    <title>{{config.event.name}} &bull; {{config.event.description}}</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
@@ -37,7 +37,6 @@
     <meta name="msapplication-TileImage" content="assets/favicon/mstile-144x144.png">
     <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-
 </head>
 <body>
     <header class="header">
@@ -55,5 +54,63 @@
             <source src="assets/video/fif.mp4" type="video/mp4">
         </video>
     </header>
+
+    <section class="section-features">
+        <h1 class="section-title">Front in Floripa?</h1>
+    </section>
+
+    <section class="section-speakers">
+        <h1 class="section-title">Palestrantes</h1>
+        <div class="speakers-list">
+            {{#each speakers}}
+            <div class="speaker-item">
+                <img class="speaker-avatar" src="assets/img/speakers/{{avatar}}">
+                <h3 class="speaker-name">{{name}}</h3>
+                <p class="speaker-bio">{{bio}}</p>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+
+    <section class="section-schedule">
+        <h1 class="section-title">Programação</h1>
+        <ul>
+            {{#each schedule}}
+                <li>{{time}}</li>
+            {{/each}}
+        </ul>
+    </section>
+
+    <section class="section-local">
+        <h1 class="section-title--bg">
+            <span>local</span>
+        </h1>
+        <div class="local-wrapper">
+            <div class="local-content">
+                <h3 class="local-title">Senai - Ctai</h3>
+                <p class="local-description">Rodovia SC-401, 3730</p>
+                <p class="local-description">Saco Grande - Florianópolis - SC</p>
+                <p class="local-description">(Próximo ao Floripa Shopping)</p>
+                <a class="local-link" href="#">Ver mapa</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-tickets">
+        <h1 class="section-title">Tickets</h1>
+        <div class="ticket-wrapper">
+            <div class="ticket-item">
+                {{#if config.ticket.sell}}
+                    <div class="ticket-item-content">
+                        <span class="ticket-item-lote">{{config.ticket.lote}}&ordm; lote</span>
+                        <span class="ticket-item-value">R$ {{config.ticket.value}},00</span>
+                    </div>
+                {{/if}}
+            </div>
+            <div class="ticket-buy-area">
+                <a href="#" class="button-buy button-buy-ticket">comprar ticket</a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

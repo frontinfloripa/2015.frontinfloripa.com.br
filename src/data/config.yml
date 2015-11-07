@@ -1,0 +1,8 @@
+event:
+  name: "Front in Floripa"
+  description: "Maior evento front-end de Santa Catarina"
+
+ticket:
+  sell: true
+  lote: 1
+  value: 60
