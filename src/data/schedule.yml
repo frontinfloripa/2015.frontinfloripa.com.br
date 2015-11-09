@@ -1,12 +1,18 @@
+# Type:
+#   tag: credentials
+#   mic: speaker
+#   coffee: coffee-breaks
+#   food: lunch
+#   beer: happy-hours
+
 -
   time: 8h
-  type: talk
-  talk: "Nome da Talk aqui"
-  description: "Lorem Ipsum"
-  speaker: "Jean Carlo Emer 12"
+  type: tag
+  title: "Credenciamento"
+  description: "Será destinado um período de uma hora para o credenciamento oficial. Aconselhamos que você chegue nesse horário, mas caso não possa, você pode entrar a qualquer momento caso já tenha ingresso. Não garantimos que na hora terá ingressos disponíveis ;)"
 -
-  time: 8h
-  type: talk
-  talk: "Nome da Talk aqui"
-  description: "Lorem Ipsum"
-  speaker: "Jean Carlo Emer"
+  time: 9h
+  type: mic
+  title: "Em breve"
+  description: "Em breve"
+  speaker: "Em Breve"

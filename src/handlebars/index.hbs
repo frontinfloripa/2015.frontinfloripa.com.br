@@ -57,6 +57,29 @@
 
     <section class="section-features">
         <h1 class="section-title">Front in Floripa?</h1>
+        <div class="features-wrapper">
+            <div class="feature-item">
+                <h3 class="feature-title icon-network">Networking</h3>
+                <p class="feature-description">
+                    Venha participar do melhor networking de desenvolvimento web de Floripa. Um evento onde <strong>160 pessoas</strong> de todo o sul do Brasil trocam suas ideias e experiências.
+                </p>
+            </div>
+            <div class="feature-item">
+                <h3 class="feature-title icon-book">Livros & Brindes</h3>
+                <p class="feature-description">
+                    Terá sorteios de livros, camisetas e vários brindes para a galera. Chegou a hora de adiquir conhecimento e ainda se encher de souvenirs.
+                </p>
+            </div>
+            <div class="feature-item">
+                <h3 class="feature-title icon-briefcase">Quadro de Vagas</h3>
+                <p class="feature-description">
+                    Está procurando um emprego ou atrás de novas aventuras? Vamos deixar durante todo o evento um quadro de vagas de Florianópolis e região.
+                </p>
+            </div>
+        </div>
+        <div class="feature-notes">
+            <p>Sim, o maior evento front-end de Santa Catarina chega na sua terceira edição. Confira as reviews de como foi o evento em 2014, feita pelo <a href="http://cezinha.info/2014/11/21/front-in-floripa-2014-minhas-impressoes/" target="_blank">Cezinha Anjos</a> e pela <a href="http://shipit.resultadosdigitais.com.br/blog/front-in-floripa-2014/" target="_blank">Resultados Digitais</a></p>
+        </div>
     </section>
 
     <section class="section-speakers">
@@ -66,19 +89,52 @@
             <div class="speaker-item">
                 <img class="speaker-avatar" src="assets/img/speakers/{{avatar}}">
                 <h3 class="speaker-name">{{name}}</h3>
-                <p class="speaker-bio">{{bio}}</p>
+                <p class="speaker-bio">
+                    {{bio}}
+                </p>
+                <div class="speaker-icon-wrapper">
+                    {{#if twitter}}
+                        <a class="speaker-icon icon-twitter-circled" target="_blank" href="http://twitter.com/{{twitter}}"></a>
+                    {{/if}}
+                    {{#if github}}
+                        <a class="speaker-icon icon-github-circled" target="_blank" href="http://github.com/{{github}}"></a>
+                    {{/if}}
+                </div>
             </div>
             {{/each}}
         </div>
+        {{#if config.callforpaper.open}}
+        <div class="speakers-c4p">
+            <a href="{{config.callforpaper.form}}" target="_blank" class="button-buy button-c4p">
+                Quero palestrar no evento!
+            </a>
+        </div>
+        {{/if}}
     </section>
 
     <section class="section-schedule">
         <h1 class="section-title">Programação</h1>
-        <ul>
-            {{#each schedule}}
-                <li>{{time}}</li>
-            {{/each}}
-        </ul>
+        <div class="schedule-wrapper">
+            <ul class="schedule-list">
+                {{#each schedule}}
+                    <li class="schedule-item other">
+                        <span class="schedule-item-hour">{{time}}</span>
+                        <span class="schedule-item-type">
+                            <span class="icon-{{type}}"></span>
+                        </span>
+                        <div class="schedule-item-box">
+                            <h4 class="schedule-item-title">{{title}}</h4>
+                            {{#if speaker}}
+                                <h5 class="schedule-item-speaker">{{speaker}}</h5>
+                            {{/if}}
+                            <p class="schedule-item-description">
+                                {{description}}
+                            </p>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
     </section>
 
     <section class="section-local">
@@ -99,18 +155,62 @@
     <section class="section-tickets">
         <h1 class="section-title">Tickets</h1>
         <div class="ticket-wrapper">
-            <div class="ticket-item">
-                {{#if config.ticket.sell}}
+            {{#if config.ticket.sale}}
+                <div class="ticket-item">
                     <div class="ticket-item-content">
                         <span class="ticket-item-lote">{{config.ticket.lote}}&ordm; lote</span>
                         <span class="ticket-item-value">R$ {{config.ticket.value}},00</span>
                     </div>
-                {{/if}}
-            </div>
-            <div class="ticket-buy-area">
-                <a href="#" class="button-buy button-buy-ticket">comprar</a>
-            </div>
+                </div>
+                <div class="ticket-buy-area">
+                    <a href="http://www.eventick.com.br/frontinfloripa2015" class="button-buy button-buy-ticket" target="_blank">comprar</a>
+                </div>
+                <p class="tickets-more">
+                    Para pacotes empresariais, entre em contato pelo e-mail:<br />
+                    <strong>contato@frontinfloripa.com.br</strong>
+                </p>
+            {{else}}
+                <div class="ticket-soldout">
+                    Ingressos esgotados :/
+                </div>
+            {{/if}}
         </div>
     </section>
+
+    <section class="section-sponsors">
+        <h1 class="section-title-sponsor">Patrocínio</h1>
+        <div class="sponsors-wrapper">
+            {{#each sponsors}}
+                <a class="sponsor-item" href="{{website}}" target="_blank" title="{{name}}">
+                    <img class="sponsor-logo" src="assets/img/sponsors/{{logo}}" />
+                </a>
+            {{/each}}
+        </div>
+
+        <h1 class="section-title-sponsor">Apoio</h1>
+        <div class="sponsors-wrapper">
+            {{#each support}}
+                <a class="support-item" href="{{website}}" target="_blank" title="{{name}}">
+                    <img class="sponsor-logo" src="assets/img/sponsors/{{logo}}" />
+                </a>
+            {{/each}}
+        </div>
+    </section>
+
+    <footer class="footer-organization">
+        <h1 class="section-title-organization">Organização</h1>
+        <div class="organization-wrapper">
+            {{#each organizers}}
+                <div class="organizer-item">
+                    <div class="organizer-photo">
+                        <img src="assets/img/organizers/{{avatar}}">
+                    </div>
+                    <h4 class="organizer-name">{{name}}</h4>
+                    <p class="organizer-mail">{{email}}</p>
+                </div>
+            {{/each}}
+            <p class="organizer-mail-frontinfloripa">contato@frontinfloripa.com.br</p>
+        </div>
+    </footer>
 </body>
 </html>

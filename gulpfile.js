@@ -35,15 +35,21 @@ gulp.task('connect', connect.server({
 
 // -- Handlebars (HTML) task
 gulp.task('handlebars', function () {
-    var config   = yaml.safeLoad(fs.readFileSync('./src/data/config.yml', 'utf-8'));
-    var speakers = yaml.safeLoad(fs.readFileSync('./src/data/speakers.yml', 'utf-8'));
-    var schedule = yaml.safeLoad(fs.readFileSync('./src/data/schedule.yml', 'utf-8'));
+    var config      = yaml.safeLoad(fs.readFileSync('./src/data/config.yml', 'utf-8'));
+    var speakers    = yaml.safeLoad(fs.readFileSync('./src/data/speakers.yml', 'utf-8'));
+    var schedule    = yaml.safeLoad(fs.readFileSync('./src/data/schedule.yml', 'utf-8'));
+    var sponsors    = yaml.safeLoad(fs.readFileSync('./src/data/sponsors.yml', 'utf-8'));
+    var support     = yaml.safeLoad(fs.readFileSync('./src/data/support.yml', 'utf-8'));
+    var organizers  = yaml.safeLoad(fs.readFileSync('./src/data/organizers.yml', 'utf-8'));
     
     gulp.src(files.handlebars)
         .pipe(handlebars({
             config: config,
             speakers: speakers,
-            schedule: schedule
+            schedule: schedule,
+            sponsors: sponsors,
+            support: support,
+            organizers: organizers
         }))
         .pipe(rename('index.html'))
         .pipe(gulp.dest(paths.dist))

@@ -1,0 +1,40 @@
+-
+  name: "Senai"
+  website: "http://sc.senai.br"
+  logo: "senai.png"
+-
+  name: "W3C"
+  website: "http://www.w3c.br"
+  logo: "w3c.png"
+-
+  name: "CGIBR"
+  website: "http://cgi.br"
+  logo: "cgibr.png"
+-
+  name: "NICBR"
+  website: "http://www.nic.br"
+  logo: "nicbr.png"
+-
+  name: "BrazilJS"
+  website: "http://braziljs.org"
+  logo: "braziljs.png"
+-
+  name: "FloripaJS"
+  website: "http://floripajs.org"
+  logo: "floripajs.png"
+-
+  name: "Acate"
+  website: "https://www.acate.com.br"
+  logo: "acate.png"
+-
+  name: "Grupo Digital de Santa Catarina"
+  website: "http://www.gdsc.com.br"
+  logo: "gdsc.png"
+-
+  name: "Codeway"
+  website: "http://codeway.com.br"
+  logo: "codeway.png"
+-
+  name: "PHPSC"
+  website: "http://www.phpsc.com.br"
+  logo: "phpsc.png"

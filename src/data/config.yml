@@ -2,7 +2,11 @@ event:
   name: "Front in Floripa"
   description: "Maior evento front-end de Santa Catarina"
 
+callforpaper:
+  open: true
+  form: "http://goo.gl/forms/0eSaqUIg6K"
+
 ticket:
-  sell: true
+  sale: true
   lote: 1
   value: 60

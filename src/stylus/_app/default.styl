@@ -16,7 +16,7 @@
     display: block
     width: 100%
     height: 50px
-    background: bg('img/tint.png') center bottom no-repeat
+    background: bg('img/header-texture.png') center bottom no-repeat
     z-index: 20
     
   &:before
@@ -111,7 +111,67 @@
 // -- Section: Features
 .section-features
   @extends $section
-  height: 100em
+  
+.features-wrapper
+  padding-top: 20em
+  padding-bottom: 10em
+  @extends $container
+  
+  @media phone
+    padding-top: 5em
+  
+.feature-item
+  @extends $grider-4
+  text-align: center
+  padding: 0 2em
+    
+  @media phone
+    @extends $grider-phone-12
+  
+.feature-title
+  font-size: 2em
+  display: block
+  color: #555
+  font-weight: 800
+  text-transform: uppercase
+  margin-bottom: .6em
+
+  &:before
+    font-size: 5em
+    display: block
+    margin: 0 auto .2em
+    line-height: 1
+    color: $color-action
+    
+.feature-description
+  font-size: 1.4em
+  line-height: 1.6em
+  color: #999
+  margin: 0
+  font-weight: 400
+  
+.feature-notes
+  padding-top: 1em
+  padding-bottom: 20em
+  
+  p
+    font-size: 2.5em
+    font-weight: 400
+    color: #888
+    max-width: 55%
+    margin: 0 auto
+    text-align: center
+    line-height: 1.8em
+    
+    @media phone
+      max-width: 80%
+      font-size: 2em
+    
+    a
+      color: $color-action
+      
+      &:hover
+        color: lighten(@color, 10%)
 
 // -- Section: Speakers
 .section-speakers
@@ -137,6 +197,7 @@
   padding-left: 14em
   position: relative
   z-index: 100
+  overflow: visible
   
   @media phone
     min-height: 12em
@@ -154,7 +215,7 @@
     max-width: 8em
   
 .speaker-name
-  margin: .4em 0 0 0
+  margin: 0
   background: #353535
   color: #fff
   display: inline-block
@@ -164,6 +225,7 @@
   padding: .1em .3em
   
   @media phone 
+    margin-top: 1em
     font-size: 1.6em
   
 .speaker-bio
@@ -173,18 +235,133 @@
   color: #fff
   line-height: 1.6em
   max-width: 85%
-  padding: .7em 1.1em
+  padding: .7em 1.1em 0
   background: rgba(#333, .5)
-  border-radius: 0 0 .8em 0
   
   @media phone
     display: none
+    
+.speaker-icon-wrapper
+  max-width: 85%
+  padding: 0 0 .5em .5em
+  background: rgba(#333, .5)
+  border-radius: 0 0 .8em 0
+  text-align: left
+  z-index: 200
+  
+  @media phone
+    background: none
+    margin-top: .5em
+    
+.speaker-icon
+  color: $color-action
+  font-size: 2.6em
+  display: inline-block
+  text-decoration: none
+  
+  &:hover
+    color: lighten(@color, 20%)
+    
+.speakers-c4p
+  text-align: center
+  
+  @media phone
+    font-size: .8em
+  
+.button-c4p
+  text-transform: none
 
 // -- Section: Schedule
 .section-schedule
   @extends $section
   padding-top: 0
-  height: 100em
+  padding-bottom: 20em
+    
+.schedule-wrapper
+  @extends $container
+  padding-top: 15em
+  
+  @media phone
+    padding-top: 5em
+  
+.schedule-list
+  padding: 1em 0
+  margin: 3em 16em
+  list-style: none
+  border-left: 3px dotted #ddd
+  
+  @media phone
+    margin: 3em 0 3em 4em
+  
+.schedule-item
+  position: relative
+  padding: .1em 0 0 5em
+  margin-bottom: 5em
+  min-height: 7em
+  
+.schedule-item-type
+  position: absolute
+  left: -3.4em
+  top: .4em
+  width: 6em
+  height: @width
+  background-image: bg('img/texture-schedule.png')
+  background-repeat: no-repeat
+  background-position: center center
+  background-size: 100%
+  padding: 1em
+  text-align: center
+  
+  span
+    color: #fff
+    font-size: 3em
+    margin: 0
+  
+.schedule-item-hour
+  position: absolute
+  left: -5.8em
+  top: .6em
+  text-align: right
+  font-size: 3em
+  font-weight: 800
+  color: $color-action
+  margin: 0
+  line-height: 1
+  width: 4em
+  
+  @media phone
+    position: static
+    display: inline-block
+    text-align: left
+    margin-top: .5em
+  
+.schedule-item-box
+  display: block
+  
+.schedule-item-title
+  font-size: 2.4em
+  line-height: 1
+  margin: .84em 0 0
+  font-weight: 700
+  color: #555
+  
+  @media phone
+    margin-top: .3em
+    line-height: 1.4em
+  
+.schedule-item-speaker
+  line-height: 1
+  font-size: 1.5em
+  margin: .7em 0 0 .1em
+  color: $color-action
+  text-transform: uppercase
+  
+.schedule-item-description
+  color: #888
+  font-size: 1.3em
+  line-height: 1.8em
+  margin: .5em 0 0 .25em
+  width: 90%
 
 // -- Section: Local
 .section-local
@@ -239,7 +416,17 @@
 .section-tickets
   @extends $section
   padding-top: 0
-  height: 100em
+  position: relative
+  
+  &:after
+    content: ''
+    position: absolute
+    bottom: 0
+    display: block
+    width: 100%
+    height: 50px
+    background: bg('img/footer-texture.png') center bottom no-repeat
+    z-index: 20
   
   .section-title
     padding-top: 2em
@@ -263,6 +450,7 @@
   
   @media phone 
     max-width: 90%
+    background: none
   
   &:before, &:after
     content: ''
@@ -293,6 +481,9 @@
   border-radius: 1em
   border: 2px solid #ededed
   
+  @media phone 
+    border: 2px solid #333
+  
 .ticket-item-lote
   background: $color-heading
   color: #fff
@@ -306,18 +497,126 @@
   margin-left: -(@width / 2)
   font-weight: 300
   text-transform: uppercase
+  border-radius: 5px
   
+  @media phone
+    background: #ededed
+    color: #333
+
 .ticket-item-value
   color: #fff
   font-size: 5em
   font-weight: bold
   display: block
   padding-top: .75em
-  text-shadow: 0 2px 0 #333
   
   @media phone 
     padding-top: 1.6em
     font-size: 3em
+    color: #333
   
 .button-buy-ticket
   font-size: 2.5em
+
+.ticket-soldout
+  font-size: 4em
+  padding: 2em 0 0
+  font-weight: bold
+  color: #bbb
+  
+.tickets-more
+  font-size: 1.6em
+  color: #bbb
+  margin: 5em 0 0
+  line-height: 1.6em
+
+// -- Section: Sponsors
+.section-sponsors
+  @extends $section
+  padding-top: 0
+  background: #fff
+  
+.sponsors-wrapper
+  @extends $container
+  padding-top: 10em
+  padding-bottom: 10em
+  text-align: center
+
+.sponsor-item,
+.support-item
+  display: inline-block
+  margin: 2em
+
+.sponsor-item
+  width: 23em
+  
+.sponsor-logo
+  max-width: 100%
+
+.support-item
+  width: 14em
+
+// -- Footer: Organization
+.footer-organization
+  padding-top: 8em
+  padding-bottom: 1em
+  background: #333
+  position: relative
+
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    display: block
+    width: 100%
+    height: 50px
+    background: bg('img/footer-texture.png') center bottom no-repeat
+    z-index: 20
+    transform: rotate(180deg)
+
+.organization-wrapper
+  @extends $container
+  padding-top: 7em
+  padding-bottom: 0
+  
+.organizer-item
+  @extends $grider-4
+  padding-left: 9em
+  position: relative
+  min-height: 15em
+  
+  @media phone
+    @extends $grider-phone-12
+    min-height: 12em
+
+.organizer-photo
+  position: absolute
+  left: 0
+  width: 8em
+  height: 8em
+  overflow: hidden
+  border-radius: 1em 0 0 1em
+  
+  img
+    max-width: 100%
+    
+.organizer-name
+  margin: 0
+  padding: .5em 0 .1em
+  font-size: 2.4em
+  color: #fff
+
+.organizer-mail
+  margin: 0
+  font-size: 1.3em
+  color: #ccc
+  font-weight: 300
+
+.organizer-mail-frontinfloripa
+  font-size: 2em
+  text-align: center
+  color: $color-action
+  font-weight: bold
+  
+  @media phone
+    font-size: 1.4em

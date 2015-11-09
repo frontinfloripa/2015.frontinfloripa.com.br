@@ -28,6 +28,6 @@
     "stylus": "*"
   },
   "dependencies": {
-    "gulp-plumber": "~0.5.6"
+    "gulp-plumber": "*"
   }
 }

@@ -13,3 +13,22 @@
     color: #eee
     display: inline-block
     padding: 0em .4em
+
+.section-title-sponsor
+  @extends $heading
+  padding-top: 1.5em
+  
+  &:before
+    display: none
+    
+.section-title-organization
+  @extends $heading
+  padding-top: 0
+  font-size: 3.6em
+  color: #eee
+  
+  &:before
+    display: none
+
+  @media phone
+    font-size: 3em
