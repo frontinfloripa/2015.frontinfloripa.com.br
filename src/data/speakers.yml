@@ -4,6 +4,7 @@
   avatar: "emer.jpg"
   twitter: "jcemer"
   github: "jcemer"
+  talk: "Lapidando o Globo Play"
 -
   name: "Fernando Daciuk"
   bio: "Especialista em desenvolvimento web, aproveita as horas vagas (?) ministrando alguns cursos e escrevendo algumas besteiras em seu blog."
@@ -17,6 +18,7 @@
   avatar: "rodrigobranas.jpg"
   twitter: "rodrigobranas"
   github: "rodrigobranas"
+  talk: "Real time com Socket.IO, Angular e Node.js"
 -
   name: "Raphael Amorim"
   bio: "Entusiasta da web aberta e voluntário em diversos projetos abertos, gosta de passar o tempo refatorando código e aproveitando um bom café."
@@ -30,3 +32,10 @@
   avatar: "filipi.jpg"
   twitter: "filipiz"
   github: ""
+-
+  name: "Juarez Filho"
+  bio: "Front-End Engineer na madewithlove, adora viajar e compartilhar conhecimentos sobre tecnologias Google, Web e Aplicativos Híbridos com Ionic."
+  avatar: "juarez.jpg"
+  twitter: "juarezpaf"
+  github: "juarezpaf"
+  talk: "Ionic Adventures"
