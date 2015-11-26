@@ -1,4 +1,8 @@
 -
+  name: "FloripaJS"
+  website: "http://floripajs.org"
+  logo: "floripajs.png"
+-
   name: "Senai"
   website: "http://sc.senai.br"
   logo: "senai.png"
@@ -18,10 +22,6 @@
   name: "BrazilJS"
   website: "http://braziljs.org"
   logo: "braziljs.png"
--
-  name: "FloripaJS"
-  website: "http://floripajs.org"
-  logo: "floripajs.png"
 -
   name: "Acate"
   website: "https://www.acate.com.br"
