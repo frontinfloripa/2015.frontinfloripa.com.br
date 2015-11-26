@@ -89,6 +89,11 @@
             <div class="speaker-item">
                 <img class="speaker-avatar" src="assets/img/speakers/{{avatar}}">
                 <h3 class="speaker-name">{{name}}</h3>
+                {{#if talk}}
+                <p class="speaker-talk">
+                    {{talk}}
+                </p>
+                {{/if}}
                 <p class="speaker-bio">
                     {{bio}}
                 </p>

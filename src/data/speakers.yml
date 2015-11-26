@@ -10,3 +10,23 @@
   avatar: "daciuk.jpg"
   twitter: "fdaciuk"
   github: "fdaciuk"
+  talk: "JavaScript Secrets"
+-
+  name: "Rodrigo Branas"
+  bio: "Arquiteto de software, especialista no desenvolvimento de aplicações web há mais de 15 anos."
+  avatar: "rodrigobranas.jpg"
+  twitter: "rodrigobranas"
+  github: "rodrigobranas"
+-
+  name: "Raphael Amorim"
+  bio: "Entusiasta da web aberta e voluntário em diversos projetos abertos, gosta de passar o tempo refatorando código e aproveitando um bom café."
+  avatar: "amorim.jpg"
+  twitter: "raphamundi"
+  github: "raphamorim"
+  talk: "The Power of WebGL - Hackeando sua GPU com JavaScript"
+-
+  name: "Filipi Zimermann"
+  bio: "Com 12 anos de experência com desenvolvimento para web, atualmente é Front-end Engineer e co-fundador da Nextt."
+  avatar: "filipi.jpg"
+  twitter: "filipiz"
+  github: ""
