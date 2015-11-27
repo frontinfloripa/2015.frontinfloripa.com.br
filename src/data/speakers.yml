@@ -32,6 +32,7 @@
   avatar: "filipi.jpg"
   twitter: "filipiz"
   github: ""
+  talk: "Web Animation (em dupla com Henrique)"
 -
   name: "Juarez Filho"
   bio: "Front-End Engineer na madewithlove, adora viajar e compartilhar conhecimentos sobre tecnologias Google, Web e Aplicativos Híbridos com Ionic."
@@ -39,3 +40,10 @@
   twitter: "juarezpaf"
   github: "juarezpaf"
   talk: "Ionic Adventures"
+-
+  name: "Henrique Müller"
+  bio: "Front-End Developer na Nextt, teve experiências em diversas áreas, incluindo web, games e animação. No tempo livre, tenta aprender um pouco de tudo."
+  avatar: "muller.jpg"
+  twitter: "hb_muller"
+  github: "hbmuller"
+  talk: "Web Animation (em dupla com Filipi)"
