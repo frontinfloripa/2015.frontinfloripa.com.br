@@ -3,7 +3,7 @@ event:
   description: "Maior evento front-end de Santa Catarina"
 
 callforpaper:
-  open: true
+  open: false
   form: "http://goo.gl/forms/0eSaqUIg6K"
 
 ticket:
