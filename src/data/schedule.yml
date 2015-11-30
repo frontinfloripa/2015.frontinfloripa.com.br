@@ -1,9 +1,9 @@
 # Type:
-#   tag: credentials
-#   mic: speaker
-#   coffee: coffee-breaks
-#   food: lunch
-#   beer: happy-hours
+#   tag: for credentials
+#   mic: for speaker
+#   coffee: for coffee-breaks
+#   food: for lunch
+#   beer: for happy-hours
 
 -
   time: 8h
@@ -13,6 +13,65 @@
 -
   time: 9h
   type: mic
-  title: "Em breve"
-  description: "Em breve"
-  speaker: "Em Breve"
+  title: "JavaScript Secrets"
+  description: "O Javascript por muitas vezes é mal interpretado por ter sua natureza assíncrona, ou quando você tenta compará-lo com outras linguagens que funcionam de forma diferente. Nessa talk será mostrado como usar o JS da melhor maneira possível, com dicas que talvez você não conheça, obtendo o máximo da linguagem mais utilizada no mundo atualmente."
+  speaker: "Fernando Daciuk"
+-
+  time: 10h
+  type: coffee
+  title: "Coffee-Break"
+-
+  time: 10h30
+  type: mic
+  title: "Descobrindo o futuro do CSS com cssnext"
+  description: "Nesta Lightning Talk pretendo apresentar o cssnext, um transpiler para CSS Nível 4, bem como algumas de suas funcionalidades (custom media queries, custom selectors, color, entre outras)."
+  speaker: "Lívia Amorim"
+-
+  time: 11h
+  type: mic
+  title: "Not So Static Assets"
+  description: "DSS (Dynamic Style Sheets) projeto que nasceu nas últimas semanas e ganhou destaque nos top trendings do github entre projetos do Google e Facebook! CSS`s, não precisam ser assets TÃO estáticos assim."
+  speaker: "Guilherme Souza"
+-
+  time: 12h
+  type: food
+  title: "Almoço"
+-
+  time: 14h
+  type: mic
+  title: "Real time com Socket.IO, Angular e Node.js"
+  description: ""
+  speaker: "Rodrigo Branas"
+-
+  time: 14h45
+  type: mic
+  title: "Web Animation"
+  description: "A criação de animações para web é um campo vasto e, muitas vezes, nebuloso. Existem várias maneiras de animar elementos, cada uma com suas peculiaridades. Assim, a animação é o que define qual solução adotar. Nessa palestra, discutiremos histórico e fundamentos de animação, ferramentas para animação web, manutenibilidade de código, produtividade, performance e qualidade visual da animação."
+  speaker: "Henrique Müller e Filipi Zimermann"
+-
+  time: 15h30
+  type: coffee
+  title: "Coffee-Break"
+-
+  time: 16h
+  type: mic
+  title: "The Power of WebGL - Hackeando sua GPU com JavaScript"
+  description: "Vamos aprender a hackear placas de vídeo com Javascript usando WebGL (Web Graphics Library) e a usar a mesma tecnologia para criar realidade virtual usando MozVR. WebGL é uma API em JavaScript, disponível a partir do novo elemento canvas da HTML5, que oferece suporte para renderização de gráficos 2D e gráficos 3D."
+  speaker: "Raphael Amorim"
+-
+  time: 16h45
+  type: mic
+  title: "Ionic Adventures"
+  description: "O Ionic SDK tem tido um crescimento incrível na comunidade de desenvolvimento mobile mostrando que Desenvolvedores Web podem usar HTML5, CSS e JS para criar aplicativos híbridos de qualidade. Nessa palestra entramos numa jornada mostrando o potencial do Ionic e o outras ferramentas que auxiliam na criação de aplicativos híbridos. <3"
+  speaker: "Juarez Filho"
+-
+  time: 17h30
+  type: mic
+  title: "Lapidando o Globo Play"
+  description: ""
+  speaker: "Jean Carlo Emer"
+-
+  time: 18h30
+  type: beer
+  title: "Encerramento, Sorteios e Happy-Hour"
+  description: "Vamos usar o tempo restante para os últimos sorteios e para o encerramento oficial. Depois, todos estarão convidados para nosso tradicional happy-hour, onde tomamos alguns chopp`s e jogamos conversa fora."
