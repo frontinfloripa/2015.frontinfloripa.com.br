@@ -40,7 +40,7 @@
   time: 14h
   type: mic
   title: "Real time com Socket.IO, Angular e Node.js"
-  description: ""
+  description: "Atualmente, a web vem se tornando um lugar cada vez mais dinâmico e interativo onde é necessário implementar soluções que consigam tratar informações em tempo real, de forma segura e confiável. Nesta palestra, com foco em WebSocket, vamos desenvolver juntos, passo a passo, um aplicativo utilizando a plataforma JavaScript, com Socket.IO, Angular e Node.js"
   speaker: "Rodrigo Branas"
 -
   time: 14h45
@@ -68,7 +68,7 @@
   time: 17h30
   type: mic
   title: "Lapidando o Globo Play"
-  description: ""
+  description: "Estudo de caso de um produto inovador em termos de tecnologia e conceito."
   speaker: "Jean Carlo Emer"
 -
   time: 18h30
