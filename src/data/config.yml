@@ -7,6 +7,6 @@ callforpaper:
   form: "http://goo.gl/forms/0eSaqUIg6K"
 
 ticket:
-  sale: true
+  sale: false
   lote: 1
   value: 60

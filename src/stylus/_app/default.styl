@@ -101,6 +101,10 @@
   transition: background .5s ease
   outline: 0
   
+  &.off, &.off:hover
+    cursor: default
+    background: #999
+  
   &:hover
     background: lighten(@background, 20%)
 
